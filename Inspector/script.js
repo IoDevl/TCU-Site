@@ -41,10 +41,6 @@ function initHoverEffects() {
     });
 }
 
-function initClickEffects() {
-    // Click effects removed as requested
-}
-
 function smoothScrollTo(targetId) {
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
@@ -123,12 +119,10 @@ const inspectorFacts = [
     "The Pokey Stick is exclusively available inside the inspection booth and can eliminate any personnel except fellow inspectors.",
     "Inspectors can use the !stopwatch command to track their quota progress and efficiency.",
     "The Inspector Corps was previously known as the 'Glorious Admission' before its current formation.",
-    "Inspector tryouts are not scheduled regularly - they happen randomly, so stay alert for announcements!",
     "Advanced Inspectors and above can access areas behind border barriers that regular personnel cannot enter.",
     "Senior Inspectors have the authority to host their own small-scale tryouts with board supervision.",
     "The Inspector Key only opens booth doors and cannot be used for doors outside the border checkpoint.",
     "Experienced Inspectors receive a Tokarev weapon specifically for dealing with raiders.",
-    "The free drink provided to inspectors heals exactly 1 HP per sip - a small but vital boost during long shifts."
 ];
 
 function showInspectorFact() {
@@ -162,7 +156,6 @@ function showInspectorFact() {
         fontFamily: "'Roboto Mono', monospace"
     });
     
-    // Style the header
     const header = factNotification.querySelector('.fact-header');
     Object.assign(header.style, {
         fontSize: '1.1rem',
@@ -174,7 +167,6 @@ function showInspectorFact() {
         textAlign: 'left'
     });
     
-    // Style the content
     const content = factNotification.querySelector('.fact-content');
     Object.assign(content.style, {
         fontSize: '0.85rem',
@@ -183,7 +175,6 @@ function showInspectorFact() {
         marginBottom: '5px'
     });
     
-    // Style the close button
     const closeBtn = factNotification.querySelector('.fact-close');
     Object.assign(closeBtn.style, {
         position: 'absolute',
@@ -197,7 +188,6 @@ function showInspectorFact() {
         transition: 'color 0.2s ease'
     });
     
-    // Add hover effect for close button
     closeBtn.addEventListener('mouseenter', () => {
         closeBtn.style.color = '#DAA520';
     });
