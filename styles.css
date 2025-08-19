@@ -13,6 +13,37 @@ body {
     overflow-x: hidden;
 }
 
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+    border-radius: 10px;
+    border: 1px solid rgba(204, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #cc0000 0%, #ff3333 50%, #cc0000 100%);
+    border-radius: 10px;
+    border: 1px solid #990000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #ff3333 0%, #ff6666 50%, #ff3333 100%);
+    border-color: #cc0000;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(135deg, #990000 0%, #cc0000 50%, #990000 100%);
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #cc0000 #000000;
+}
+
 body.loaded {
     background: linear-gradient(135deg, #000000 0%, #1a0000 50%, #000000 100%);
     background-attachment: fixed;
