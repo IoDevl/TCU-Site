@@ -14,26 +14,29 @@ body {
 }
 
 /* Custom Scrollbar */
+html,
+body,
+body.loaded,
+body:not(.loaded) {
+    scrollbar-width: thin;
+    scrollbar-color: #cc0000 #0a0a0a;
+}
+
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 10px !important;
 }
 
 ::-webkit-scrollbar-track {
-    background: #0a0a0a;
+    background: #0a0a0a !important;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #cc0000;
-    border-radius: 5px;
+    background: #cc0000 !important;
+    border-radius: 5px !important;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #ff3333;
-}
-
-html {
-    scrollbar-width: thin;
-    scrollbar-color: #cc0000 #0a0a0a;
+    background: #ff3333 !important;
 }
 
 body.loaded {
