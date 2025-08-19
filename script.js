@@ -414,18 +414,3 @@ document.addEventListener('keydown', function(e) {
         showAnthem();
     }
 });
-
-console.log(`
-╔══════════════════════════════════════════════════════════╗
-║            THE REVOLUTIONARY COMPUTER UNION              ║
-║                                                          ║
-║        "From each according to their ability,            ║
-║           to each according to their needs"              ║
-║                                                          ║
-║     Glory to the Union! Long live Chairman Newblord!     ║
-╚══════════════════════════════════════════════════════════╝
-
-Keyboard shortcuts:
-- Ctrl+Shift+U: Show patriotism
-- Ctrl+Shift+A: Play anthem
-`);
