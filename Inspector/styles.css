@@ -143,7 +143,7 @@ p {
 
 .join-image {
     max-width: 100%;
-    width: 520px;
+    width: 400px;
     height: auto;
     border-radius: 12px;
     display: block;
@@ -647,4 +647,33 @@ section {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--gold-accent);
+}
+
+/* Wiki Link */
+.wiki-link {
+    text-align: center;
+    margin: 40px 0 20px 0;
+    padding: 20px;
+}
+
+.wiki-link a {
+    color: var(--gold-accent) !important;
+    text-decoration: none !important;
+    font-size: 1rem;
+    border: 2px solid var(--gold-accent);
+    padding: 12px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+.wiki-link a:hover {
+    background: var(--gold-accent) !important;
+    color: var(--dark-black) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(218, 165, 32, 0.4);
 }

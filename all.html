@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCU | All Pages</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Roboto+Condensed:wght@300;400;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+            line-height: 1.6;
+            color: #fff;
+            background: linear-gradient(135deg, #000000 0%, #1a0000 50%, #000000 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-family: 'Russo One', sans-serif;
+            font-size: 3rem;
+            color: #cc0000;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .divisions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .division-card {
+            background: linear-gradient(135deg, #000000 0%, #1a0000 100%);
+            border: 2px solid #cc0000;
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .division-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(204, 0, 0, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .division-card:hover::before {
+            left: 100%;
+        }
+
+        .division-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(204, 0, 0, 0.4);
+            border-color: #ff3333;
+        }
+
+        .division-logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            border: 3px solid #cc0000;
+            background: #000;
+            padding: 10px;
+        }
+
+        .division-name {
+            font-family: 'Russo One', sans-serif;
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        .division-desc {
+            font-size: 1rem;
+            color: #e0e0e0;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        .division-btn {
+            background: #cc0000;
+            color: #ffffff;
+            border: 2px solid #cc0000;
+            padding: 12px 24px;
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .division-btn:hover {
+            background: #ff3333;
+            border-color: #ff3333;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(204, 0, 0, 0.4);
+        }
+
+        /* Coming Soon Section */
+        .coming-soon {
+            text-align: center;
+            padding: 60px 40px;
+            background: rgba(204, 0, 0, 0.05);
+            border: 2px dashed #cc0000;
+            border-radius: 12px;
+            margin-top: 40px;
+        }
+
+        .coming-soon h3 {
+            font-family: 'Russo One', sans-serif;
+            font-size: 2.5rem;
+            color: #cc0000;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .coming-soon p {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            font-weight: 300;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 1.8rem;
+            }
+            
+            .nav-buttons {
+                justify-content: center;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .divisions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h2 class="section-title">UNION PAGES</h2>
+            
+            <div class="divisions-grid">
+                <!-- Pot Brigade -->
+                <div class="division-card">
+                    <img src="PotBrigade/logo.png" alt="Pot Brigade Logo" class="division-logo">
+                    <h3 class="division-name">POT BRIGADE</h3>
+                    <p class="division-desc">The Pot Brigade is a group of heavy soldiers that specialize in armor, damage, and range. They are the future tank engineers, reconnaissance, and the juggernauts of the Glorious Robot Army. Expect them to always be on the front lines.</p>
+                    <a href="PotBrigade/index.html" class="division-btn">ENTER BRIGADE</a>
+                </div>
+
+                <!-- Union Guards -->
+                <div class="division-card">
+                    <img src="UnionGuards/logo.png" alt="Union Guards Logo" class="division-logo">
+                    <h3 class="division-name">UNION GUARDS</h3>
+                    <p class="division-desc">The Union Guards are the ceremonial honour guards of The Computer Union, and they are the general elite forces in TCU. The Union Guards are responsible for the personal protection of government members and diplomatic VIPs/allies (including the dictator himself), protection of important state events/ceremonies, government building, controlling and commanding troops and the safety of the Union!</p>
+                    <a href="UnionGuards/index.html" class="division-btn">JOIN GUARDS</a>
+                </div>
+
+                <!-- Inspector Corps -->
+                <div class="division-card">
+                    <img src="Inspector/logo.png" alt="Inspector Corps Logo" class="division-logo">
+                    <h3 class="division-name">INSPECTOR CORPS</h3>
+                    <p class="division-desc">The Inspector Corps, previously known as the Glorious Admission before the disbandment of the old group, is responsible for processing immigrants at the Border Checkpoint.</p>
+                    <a href="Inspector/index.html" class="division-btn">INSPECT BORDERS</a>
+                </div>
+            </div>
+
+            <!-- Coming Soon Section -->
+            <div class="coming-soon">
+                <h3>OTHER PAGES</h3>
+                <p>Additional ministries, divisions, departments, ... pages are currently being developed.<br>Glory to the Union!</p>
+            </div>
+
+            <!-- Navigation Links -->
+            <div style="text-align: center; margin-top: 60px; padding: 60px 0; border-top: 1px solid rgba(204, 0, 0, 0.3);">
+                <div style="display: flex; gap: 40px; justify-content: center; align-items: center; flex-wrap: wrap;">
+                    <a href="index.html" style="color: #cc0000; text-decoration: none; font-size: 1rem; border: 1px solid #cc0000; padding: 12px 20px; border-radius: 6px; transition: all 0.3s ease; font-family: 'Orbitron', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Home</a>
+                    <a href="https://papers-pls.fandom.com/wiki/Special:AllPages" target="_blank" style="color: #cc0000; text-decoration: none; font-size: 1rem; border: 1px solid #cc0000; padding: 12px 20px; border-radius: 6px; transition: all 0.3s ease; font-family: 'Orbitron', monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Check the original wiki →</a>
+                   </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

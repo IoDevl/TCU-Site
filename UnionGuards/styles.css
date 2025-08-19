@@ -367,8 +367,6 @@ section {
     color: var(--text-muted) !important;
 }
 
-/* Equipment sections removed */
-
 .company-requirements {
     background: rgba(255, 215, 0, 0.1);
     padding: 1rem 1.2rem;
@@ -381,7 +379,6 @@ section {
     letter-spacing: 1px;
 }
 
-/* Company-specific colors */
 .company-card.young-guards::before {
     background: linear-gradient(90deg, #8B0000, #DC143C, #8B0000);
 }
@@ -732,4 +729,33 @@ section {
     margin: 0;
     opacity: 0.8;
     letter-spacing: 0.5px;
+}
+
+/* Wiki Link */
+.wiki-link {
+    text-align: center;
+    margin: 40px 0 20px 0;
+    padding: 20px;
+}
+
+.wiki-link a {
+    color: var(--secondary-red) !important;
+    text-decoration: none !important;
+    font-size: 1rem;
+    border: 2px solid var(--secondary-red);
+    padding: 12px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+.wiki-link a:hover {
+    background: var(--secondary-red) !important;
+    color: #fff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(178, 34, 34, 0.4);
 }

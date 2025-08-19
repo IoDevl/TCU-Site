@@ -628,3 +628,32 @@ section {
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-green);
 }
+
+/* Wiki Link */
+.wiki-link {
+    text-align: center;
+    margin: 40px 0 20px 0;
+    padding: 20px;
+}
+
+.wiki-link a {
+    color: var(--accent-green) !important;
+    text-decoration: none !important;
+    font-size: 1rem;
+    border: 2px solid var(--accent-green);
+    padding: 12px 20px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+.wiki-link a:hover {
+    background: var(--accent-green) !important;
+    color: #fff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(107, 142, 35, 0.4);
+}

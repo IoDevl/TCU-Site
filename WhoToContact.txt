@@ -1,4 +1,0 @@
-----ART----
-JoinPB: ???
-JoinUG: @corl_nix
-JoinINSPECTOR: @luvbug.ze
