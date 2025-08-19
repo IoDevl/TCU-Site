@@ -277,16 +277,49 @@ function showPatriotism() {
     showNotification(randomMessage, 'success');
 }
 
+let currentAudio = null;
+let isAudioPlaying = false;
+
 function showAnthem() {
-    const audio = new Audio('Anthem.wav');
+    const anthemButton = document.querySelector('.cta-btn.secondary');
     
-    audio.play().then(() => {
+    if (isAudioPlaying && currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentAudio = null;
+        isAudioPlaying = false;
+        
+        if (anthemButton) {
+            anthemButton.textContent = 'PLAY ANTHEM';
+        }
+        
+        showNotification("Anthem stopped", 'info');
+        return;
+    }
+    
+    currentAudio = new Audio('Anthem.wav');
+    
+    if (anthemButton) {
+        anthemButton.textContent = 'STOP ANTHEM';
+    }
+    
+    currentAudio.play().then(() => {
+        isAudioPlaying = true;
         showNotification("Playing the Revolutionary Computer Union Anthem...", 'info');
         createMusicVisualization();
     }).catch((error) => {
         console.log('Could not play anthem:', error);
         showNotification("Anthem file not found - Playing in spirit!", 'info');
         createMusicVisualization();
+        isAudioPlaying = true;
+    });
+    
+    currentAudio.addEventListener('ended', () => {
+        isAudioPlaying = false;
+        currentAudio = null;
+        if (anthemButton) {
+            anthemButton.textContent = 'PLAY ANTHEM';
+        }
     });
 }
 
