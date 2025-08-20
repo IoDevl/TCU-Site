@@ -297,7 +297,7 @@ function showAnthem() {
         return;
     }
     
-    currentAudio = new Audio('Anthem.wav');
+    currentAudio = new Audio('Anthem.mp3');
     
     if (anthemButton) {
         anthemButton.textContent = 'STOP ANTHEM';
