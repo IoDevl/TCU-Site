@@ -297,7 +297,7 @@ function showAnthem() {
         return;
     }
     
-    currentAudio = new Audio('Anthem.mp3'); //Why is this not working?
+    currentAudio = new Audio('Anthem.mp3');
     
     if (anthemButton) {
         anthemButton.textContent = 'STOP ANTHEM';
