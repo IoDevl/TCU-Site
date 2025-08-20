@@ -14,29 +14,9 @@ body {
 }
 
 /* Custom Scrollbar */
-html,
-body,
-body.loaded,
-body:not(.loaded) {
+* {
     scrollbar-width: thin;
     scrollbar-color: #cc0000 #0a0a0a;
-}
-
-::-webkit-scrollbar {
-    width: 10px !important;
-}
-
-::-webkit-scrollbar-track {
-    background: #0a0a0a !important;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #cc0000 !important;
-    border-radius: 5px !important;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #ff3333 !important;
 }
 
 body.loaded {
@@ -45,12 +25,6 @@ body.loaded {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     transition: background 0.3s ease;
-}
-
-section, header {
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: translateY(0) !important;
 }
 
 body:not(.loaded) .leader-card,

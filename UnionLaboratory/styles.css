@@ -638,21 +638,10 @@ section {
     color: var(--accent-blue);
 }
 
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--dark-black);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--secondary-blue);
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-blue);
+/* Custom scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-blue) var(--dark-black);
 }
 
 /* Wiki Link */
