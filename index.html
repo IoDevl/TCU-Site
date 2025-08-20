@@ -9,8 +9,154 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Roboto+Condensed:wght@300;400;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Temporary Notification */
+        .top-notification {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%) translateY(-100%);
+            background: linear-gradient(135deg, #8b0000 0%, #660000 100%);
+            border: 2px solid #aa0000;
+            border-top: none;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 4px 20px rgba(139, 0, 0, 0.3);
+            z-index: 10000;
+            min-width: 300px;
+            max-width: 500px;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            animation: slideDown 0.8s ease-out 0.5s forwards;
+        }
+
+        .top-notification:hover {
+            transform: translateX(-50%) translateY(2px);
+            box-shadow: 0 6px 25px rgba(139, 0, 0, 0.4);
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateX(-50%) translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(-50%) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .notification-content {
+            padding: 15px 20px;
+            color: #fff;
+        }
+
+        .notification-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .notification-title {
+            font-family: 'Russo One', sans-serif;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #fff;
+        }
+
+        .notification-close {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .notification-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        .notification-expanded {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .notification-expanded .discord-link {
+            color: #ddaa77;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 1px solid #ddaa77;
+            transition: all 0.3s ease;
+        }
+
+        .notification-expanded .discord-link:hover {
+            color: #eee;
+            border-bottom-color: #eee;
+            text-shadow: 0 0 5px rgba(238, 238, 238, 0.4);
+        }
+
+        .notification-expanded p {
+            margin: 0;
+        }
+
+        .top-notification.hidden {
+            pointer-events: none;
+            animation: slideUp 0.5s ease-in forwards !important;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateX(-50%) translateY(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(-50%) translateY(-100%);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .top-notification {
+                min-width: 280px;
+                max-width: 90vw;
+            }
+            
+            .notification-content {
+                padding: 12px 15px;
+            }
+            
+            .notification-title {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Temporary Notification -->
+    <div id="topNotification" class="top-notification">
+        <div class="notification-content">
+            <div class="notification-header">
+                <span class="notification-title">Please read</span>
+                <button class="notification-close">&times;</button>
+            </div>
+            <div class="notification-expanded" id="expandedContent" style="display: none;">
+                <p>Hello, I'm in need of artists for division propaganda. If you have some or know someone who does, please contact me at <a href="https://discord.com/users/686613311886065668" target="_blank" class="discord-link">@io.dev</a>. For more information about the art, check any <a href="all" class="discord-link">page</a>. Thanks for reading!</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero-proclamation">
         <div class="proclamation-content">
@@ -206,5 +352,41 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Temporary Notification
+        function closeNotification() {
+            const notification = document.getElementById('topNotification');
+            notification.classList.add('hidden');
+        }
+
+        function toggleNotification() {
+            const expandedContent = document.getElementById('expandedContent');
+            const notification = document.getElementById('topNotification');
+            
+            if (expandedContent.style.display === 'none') {
+                expandedContent.style.display = 'block';
+                notification.style.cursor = 'default';
+            } else {
+                expandedContent.style.display = 'none';
+                notification.style.cursor = 'pointer';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const notification = document.getElementById('topNotification');
+            const closeBtn = notification.querySelector('.notification-close');
+            
+            notification.addEventListener('click', function(e) {
+                if (e.target !== closeBtn && !closeBtn.contains(e.target)) {
+                    toggleNotification();
+                }
+            });
+            
+            closeBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                closeNotification();
+            });
+        });
+    </script>
 </body>
 </html>
