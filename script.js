@@ -305,11 +305,11 @@ function showAnthem() {
     
     currentAudio.play().then(() => {
         isAudioPlaying = true;
-        showNotification("Playing the Revolutionary Computer Union Anthem...", 'info');
+        showNotification("Playing TCU Anthem...", 'info');
         createMusicVisualization();
     }).catch((error) => {
         console.log('Could not play anthem:', error);
-        showNotification("Anthem file not found - Playing in spirit!", 'info');
+        showNotification("Anthem file not found.. what?", 'info');
         createMusicVisualization();
         isAudioPlaying = true;
     });
