@@ -89,18 +89,18 @@ function initTerminalAnimation() {
     const commands = [
         'access cgb_mainframe',
         'authenticate --user=RealCGB',
-        'requesting_clearance',
-        'access_program_chi',
-        'scan_personnel_records',
+        'request clearance',
+        'access program_chi',
+        'scan personnel_records',
         'clear'
     ];
     
     const responses = [
         'You must authenticate to access the CGB mainframe.',
         'Authentication failed. Access denied.',
-        'Access denied.',
-        'Access denied.',
-        'Access denied.'
+        'Request denied: not authenticated.',
+        'Access denied: not authenticated.',
+        'Access denied: not authenticated.'
     ];
     
     let currentCommandIndex = 0;
