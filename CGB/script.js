@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     initScrollAnimations();
     initHoverEffects();
-    initClickEffects();
     initTerminalAnimation();
 });
 
@@ -38,49 +37,6 @@ function initHoverEffects() {
         
         card.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0)';
-        });
-    });
-}
-
-function initClickEffects() {
-    const clickableItems = document.querySelectorAll('.operation-card, .warning-box');
-    
-    clickableItems.forEach(item => {
-        item.addEventListener('click', function() {
-            const ripple = document.createElement('div');
-            const rect = this.getBoundingClientRect();
-            const size = Math.max(rect.width, rect.height);
-            
-            ripple.style.width = ripple.style.height = size + 'px';
-            ripple.style.left = '50%';
-            ripple.style.top = '50%';
-            ripple.style.transform = 'translate(-50%, -50%) scale(0)';
-            ripple.style.position = 'absolute';
-            ripple.style.borderRadius = '50%';
-            ripple.style.background = 'rgba(45, 90, 45, 0.3)';
-            ripple.style.pointerEvents = 'none';
-            ripple.style.transition = 'transform 0.6s ease-out, opacity 0.6s ease-out';
-            
-            const originalPosition = this.style.position;
-            if (getComputedStyle(this).position === 'static') {
-                this.style.position = 'relative';
-            }
-            
-            this.appendChild(ripple);
-            
-            setTimeout(() => {
-                ripple.style.transform = 'translate(-50%, -50%) scale(2)';
-                ripple.style.opacity = '0';
-            }, 10);
-            
-            setTimeout(() => {
-                ripple.remove();
-                if (originalPosition) {
-                    this.style.position = originalPosition;
-                } else if (this.style.position === 'relative') {
-                    this.style.position = '';
-                }
-            }, 600);
         });
     });
 }
