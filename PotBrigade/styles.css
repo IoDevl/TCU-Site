@@ -488,33 +488,6 @@ section {
     font-weight: 500;
 }
 
-/* Gallery Link */
-.gallery-link-container {
-    text-align: center;
-    margin-top: 3rem;
-}
-
-.gallery-link {
-    display: inline-block;
-    color: var(--accent-green);
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 600;
-    padding: 0.8rem 1.5rem;
-    border: 2px solid var(--accent-green);
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.gallery-link:hover {
-    background: var(--accent-green);
-    color: var(--dark-black);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(107, 142, 35, 0.3);
-}
-
 
 
 @media (max-width: 768px) {
