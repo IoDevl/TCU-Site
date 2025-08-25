@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Resource Not Found | The Computer Union</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Roboto+Condensed:wght@300;400;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .error-hero {
+            padding: 120px 0;
+            position: relative;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .error-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .error-code {
+            font-family: 'Orbitron', monospace;
+            font-size: 8rem;
+            font-weight: 900;
+            color: #cc0000;
+            text-shadow: 
+                0 0 10px rgba(204, 0, 0, 0.5),
+                0 0 20px rgba(204, 0, 0, 0.3),
+                0 0 30px rgba(204, 0, 0, 0.2);
+            margin-bottom: 20px;
+            letter-spacing: 4px;
+            animation: errorPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes errorPulse {
+            0%, 100% { 
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% { 
+                transform: scale(1.05);
+                opacity: 0.8;
+            }
+        }
+
+        .error-title {
+            font-family: 'Russo One', sans-serif;
+            font-size: 2.5rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .error-subtitle {
+            font-family: 'Russo One', sans-serif;
+            font-size: 1.5rem;
+            color: #ff3333;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .error-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .error-btn {
+            font-family: 'Orbitron', monospace;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 15px 30px;
+            border: 2px solid #cc0000;
+            border-radius: 8px;
+            background: transparent;
+            color: #cc0000;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            min-width: 180px;
+            display: inline-block;
+        }
+
+        .error-btn:hover {
+            background: #cc0000;
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(204, 0, 0, 0.4);
+        }
+
+        .error-btn.primary {
+            background: #cc0000;
+            color: #ffffff;
+        }
+
+        .error-btn.primary:hover {
+            background: #ff3333;
+            border-color: #ff3333;
+        }
+
+
+
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 5rem;
+            }
+            
+            .error-title {
+                font-size: 1.8rem;
+            }
+            
+            .error-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .error-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .error-code {
+                font-size: 4rem;
+            }
+            
+            .error-title {
+                font-size: 1.5rem;
+            }
+
+        }
+    </style>
+</head>
+<body class="loaded">
+    <section class="error-hero">
+        <div class="error-content">
+            <img src="logo.png" alt="The Computer Union Logo" class="union-logo">
+            <div class="error-code">404</div>
+            <h1 class="error-title">Resource Not Found</h1>
+            <h2 class="error-subtitle">Access Denied, Comrade</h2>
+            
+            <div class="error-actions">
+                <a href="/" class="error-btn primary">Home</a>
+                <a href="all" class="error-btn">All Pages</a>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const errorCode = document.querySelector('.error-code');
+            
+            setInterval(() => {
+                if (Math.random() < 0.1) {
+                    errorCode.style.color = '#ff3333';
+                    errorCode.style.textShadow = '0 0 20px rgba(255, 51, 51, 0.8)';
+                    
+                    setTimeout(() => {
+                        errorCode.style.color = '#cc0000';
+                        errorCode.style.textShadow = '0 0 10px rgba(204, 0, 0, 0.5), 0 0 20px rgba(204, 0, 0, 0.3), 0 0 30px rgba(204, 0, 0, 0.2)';
+                    }, 200);
+                }
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
