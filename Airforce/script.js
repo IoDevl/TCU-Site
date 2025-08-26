@@ -102,9 +102,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 const airforceFacts = [
-    "The name of the airbase is Airbase Injected, named after the current Commanding Officer.",
-    "The Airforce is the current smallest TGRA division, due to their low acceptance rate.",
-    "The first ever Commanding Officer of the UAF was Areg."
+    "The name of the airbase is Airbase Injected, named after the former 1IC Injected (Dlmoroc).",
+    "The Airforce is the current smallest TGRA division and is considered the hardest division to get into, as they have a low acceptance rate during tryouts, and ATC applications are considered incredibly difficult.",
+    "During the early existence of the Union's Airforce, it was known to be one of the most elite divisions next to Spedsnaz in TGRA.",
+    "The first-ever 1IC of the UAF was Areg considering he created this division.",
+    "During patrols and supervised flights, any members of the UAF holding the rank of Officer Cadet or above may toggle a free plane spawn switch, which allows Junior Pilot and above to freely spawn planes. (There is also another button that destroys all planes, which is used when an Airforce event ends.)"
 ];
 
 function showAirforceFact() {

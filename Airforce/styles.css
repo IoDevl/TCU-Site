@@ -265,6 +265,68 @@ section {
     color: var(--light-blue);
 }
 
+/* Equipment Section */
+.equipment {
+    background: transparent;
+}
+
+.equipment-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.equipment-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.equipment-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-blue);
+    box-shadow: 0 15px 35px rgba(30, 58, 138, 0.3);
+}
+
+.equipment-card h3 {
+    color: var(--accent-blue);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+}
+
+.equipment-description {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.equipment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.equipment-item {
+    background: rgba(59, 130, 246, 0.1);
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    border-left: 3px solid var(--secondary-blue);
+    transition: all 0.3s ease;
+}
+
+.equipment-item:hover {
+    background: rgba(59, 130, 246, 0.2);
+    transform: translateX(5px);
+    color: var(--text-primary);
+}
+
 /* Recruitment Section */
 .recruitment {
     background: transparent;
@@ -402,9 +464,183 @@ section {
     transition: all 0.3s ease;
 }
 
-.academy-link:hover {
+    .academy-link:hover {
     color: var(--accent-blue);
     text-shadow: 0 0 10px var(--accent-blue);
+}
+
+.tryout-phases {
+    background: rgba(30, 58, 138, 0.2);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--primary-blue);
+    margin-bottom: 2rem;
+}
+
+.tryout-phases h4 {
+    color: var(--accent-blue);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.phase-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.phase-item {
+    background: rgba(59, 130, 246, 0.1);
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    border-left: 3px solid var(--secondary-blue);
+    transition: all 0.3s ease;
+}
+
+.phase-item:hover {
+    background: rgba(59, 130, 246, 0.2);
+    transform: translateX(5px);
+    color: var(--text-primary);
+}
+
+.rank-progression {
+    background: rgba(30, 58, 138, 0.2);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--primary-blue);
+    margin-bottom: 2rem;
+}
+
+.rank-progression h4 {
+    color: var(--accent-blue);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.rank-progression p {
+    color: var(--text-secondary);
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Ranks Section */
+.ranks {
+    background: transparent;
+}
+
+.ranks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.rank-group {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.rank-group:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-blue);
+    box-shadow: 0 15px 35px rgba(30, 58, 138, 0.3);
+}
+
+.rank-group h3 {
+    color: var(--accent-blue);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.rank-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.rank-item {
+    background: rgba(59, 130, 246, 0.1);
+    padding: 1rem;
+    border-radius: 4px;
+    border-left: 3px solid var(--secondary-blue);
+    transition: all 0.3s ease;
+}
+
+.rank-item:hover {
+    background: rgba(59, 130, 246, 0.2);
+    transform: translateX(5px);
+}
+
+.rank-item h4 {
+    color: var(--light-blue);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.rank-item p {
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.rank-item strong {
+    color: var(--accent-blue);
+}
+
+/* ATC Section */
+.atc {
+    background: transparent;
+}
+
+.atc-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.atc-description, .atc-application {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    height: fit-content;
+}
+
+.atc-description h3, .atc-application h3 {
+    color: var(--accent-blue);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.atc-description p, .atc-application p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.atc-description p:last-child, .atc-application p:last-child {
+    margin-bottom: 0;
+}
+
+.atc-description strong, .atc-application strong {
+    color: var(--light-blue);
 }
 
 /* Disclaimer Section */
@@ -463,7 +699,15 @@ section {
         gap: 2rem;
     }
     
-    .classes-grid {
+    .equipment-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .ranks-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .atc-content {
         grid-template-columns: 1fr;
     }
     
