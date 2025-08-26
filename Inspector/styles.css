@@ -420,6 +420,97 @@ section {
     margin: 0;
 }
 
+/* Booth Access Section */
+.booth-access {
+    background: transparent;
+}
+
+.access-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.access-group {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid var(--border-color);
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.access-group::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary-brown), var(--gold-accent), var(--secondary-brown));
+}
+
+.access-group:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold-accent);
+    box-shadow: var(--elegant-shadow);
+}
+
+.access-group h3 {
+    color: var(--gold-accent);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.access-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.access-item {
+    background: rgba(160, 82, 45, 0.1);
+    padding: 1rem;
+    border-radius: 6px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    border-left: 3px solid var(--secondary-brown);
+    transition: all 0.3s ease;
+}
+
+.access-item:hover {
+    background: rgba(160, 82, 45, 0.2);
+    transform: translateX(5px);
+    color: var(--text-primary);
+}
+
+.access-item em {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.access-note {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.access-note p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.access-note strong {
+    color: var(--gold-accent);
+}
+
 /* Recruitment Section */
 .recruitment {
     background: transparent;
@@ -573,7 +664,38 @@ section {
     color: var(--text-muted);
     font-size: 0.9rem;
     text-align: center;
+    margin: 0.5rem 0;
+}
+
+.leadership-info {
+    margin: 2rem 0;
+}
+
+.leader-item {
+    background: rgba(160, 82, 45, 0.1);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--secondary-brown);
+    transition: all 0.3s ease;
+}
+
+.leader-item:hover {
+    background: rgba(160, 82, 45, 0.2);
+    transform: translateX(5px);
+}
+
+.leader-item h4 {
+    color: var(--gold-accent);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.leader-item p {
+    color: var(--text-secondary);
     margin: 0;
+    font-weight: 500;
 }
 
 @media (max-width: 768px) {
@@ -594,6 +716,11 @@ section {
     
     .ranks-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .access-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
     
     section {

@@ -115,14 +115,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 const inspectorFacts = [
-    "Inspectors receive Rublex payment while they're actively inspecting at their booth.",
-    "The Pokey Stick is exclusively available inside the inspection booth and can eliminate any personnel except fellow inspectors.",
-    "Inspectors can use the !stopwatch command to track their quota progress and efficiency.",
-    "The Inspector Corps was previously known as the 'Glorious Admission' before its current formation.",
-    "Advanced Inspectors and above can access areas behind border barriers that regular personnel cannot enter.",
-    "Senior Inspectors have the authority to host their own small-scale tryouts with board supervision.",
-    "The Inspector Key only opens booth doors and cannot be used for doors outside the border checkpoint.",
-    "Experienced Inspectors receive a Tokarev weapon specifically for dealing with raiders.",
+    "Inspectors have a timer in the booth, which they use to log their quota.",
+    "The Inspector Chair prevents anyone sitting on it from taking damage from weapons (excluding Fanta & Pokey Stick).",
+    "Inspector tryouts are the hardest to get in, as it gets slocked quickly and are hosted quite rarely."
 ];
 
 function showInspectorFact() {
