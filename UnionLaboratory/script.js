@@ -157,10 +157,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 const laboratoryFacts = [
-    "Union’s Laboratory is usually referred as 'UL'",
-    "Waged a two month long battle against the URM's scientific divisions and their newspaper division when spies were first found among the UL by Juv, Sakharov and GuyDudeManDawg. This battle is referred to as the 'Spy Wars'",
+    "Union's Laboratory is usually referred to as 'UL'.",
+    "Waged a two-month-long battle against the URM's scientific divisions and their newspaper division when spies were first found among the UL by Juv, Sakharov and GuyDudeManDawg. This battle is referred to as the 'Spy Wars'.",
     "Very underrated.",
-    "I don't know what else to write in here, help me"
+    "Union’s Laboratory has 5 active departments currently."
 ];
 
 function showLaboratoryFact() {
