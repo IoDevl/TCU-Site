@@ -73,16 +73,16 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 const guardFacts = [
-    "Union Guards have authority at the border and can enforce border rules, commanding TGRA, 2BB, and PB soldiers (without abusing their powers).",
-    "The Union Guards were created on January 22nd, 2024, after the disbanding of the Mosputer Guards.",
-    "State Guards are essentially the Kremlin Guards of The Computer Union, protecting the dictator personally.",
-    "CO+ (or 1 year+) Union Guards receive the rank of 'Veteran' upon retirement, allowing continued community interaction.",
-    "The State Guard company was originally known as the Vanguardz.",
-    "Union Guards uniforms are inspired by Soviet-50s Kremlin Honor Guard uniforms with TCU modifications.",
-    "The current Union Guards Commander is Barber (Saul).",
-    "VAU (Vlads Assault Unit) served as the scrim team until its disbandment on January 1st, 2025.",
-    "The Volunteer Brigade serves as an entry pathway for exceptional candidates to join the main division.",
-    "OPMR (Office of Propaganda & Media Relations) manages the division's reputation and public image."
+    "Union Guards have authority over all non-whitelisted divisional and ministerial members when bodyguarding a VIP.",
+    "The Volunteer Brigade was a thing already way back when the Union Guards division first started; however, it was disbanded on the 30th of April, 2024. It was brought back on the 10th of December, 2024, originally with the purpose of housing all those migrating from SCAR after it was disbanded.",
+    "The first Union Guards skirmish happened on the 3rd of February, 2024, against the Bulldog Brigade. It resulted in the UG winning.",
+    "Before the application system to join the Union Guards was implemented on the 6th of May, 2024, all those who wanted to join the Union Guards had to first go through a tryout, and then an interview.",
+    "The Union Guards have 3 tests that you are able to take throughout your career: the Guardsman Certification Test (GCT) to become a Lance Corporal able to deploy, the Sergeant Aptitude Test (SAT) to become an NCO, and the Leadership Aptitude Test (LAT) to become an Officer.",
+    "The State Security role within the Union Guards Communications Server is ████████████ and ████████████.",
+    "Unlike in other divisions, Officers within the Union Guard do logistics themselves. Currently, there is no logistics team.",
+    "UG CO+ (or 1 year+) receive the rank of Veteran upon their retirement. This allows them to continue interacting with the UG community even after they have left the division.",
+    "Union Guards have gained authority in the border, being able to enforce its rules and command TGRA soldiers.",
+    "Grand Duke Commander Co-President of B1 Sergeant Infantryman Armored Corp Member JzP Junior Maizel Guard Adjudant of the Garde Impériale Human Body Shield Guardsman Command Sergeant Lord of the Deep Kentucky resident Private Pioneer Emperor Napoleon Captain Engineer Commander of the Blood Raven 3rd Company Commander of the Astra Militarum Saul Goodmanus III of Switzerland is the full name of the current commander of the Union Guards."
 ];
 
 function showGuardFact() {

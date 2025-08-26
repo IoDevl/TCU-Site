@@ -272,6 +272,53 @@ section {
     font-weight: 600;
 }
 
+/* Equipment Section */
+.equipment {
+    background: transparent;
+}
+
+.equipment-description {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.equipment-item {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.equipment-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold-accent);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
+}
+
+.equipment-item h3 {
+    color: var(--gold-accent);
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.equipment-item p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
 /* Companies Section */
 .companies {
     background: transparent;
@@ -428,8 +475,8 @@ section {
 
 .divisions-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
 }
 
 .division-card {
@@ -481,6 +528,91 @@ section {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+/* Rank Structure Section */
+.rank-structure {
+    background: transparent;
+}
+
+.ranks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.rank-group {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid var(--border-color);
+    transition: all 0.4s ease;
+}
+
+.rank-group::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary-red), var(--gold-accent));
+}
+
+.rank-group {
+    position: relative;
+}
+
+.rank-group:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold-accent);
+    box-shadow: var(--elegant-shadow);
+}
+
+.rank-group h3 {
+    color: var(--gold-accent);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.rank-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.rank-item {
+    background: rgba(178, 34, 34, 0.1);
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    text-align: center;
+    border-left: 3px solid var(--secondary-red);
+    transition: all 0.3s ease;
+}
+
+.rank-item:hover {
+    background: rgba(178, 34, 34, 0.2);
+    color: var(--text-primary);
+    transform: translateX(5px);
+}
+
+.rank-description {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid var(--border-color);
+    text-align: center;
+}
+
+.rank-description p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin: 0;
 }
 
 /* Recruitment Section */
