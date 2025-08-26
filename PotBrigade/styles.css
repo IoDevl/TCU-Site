@@ -120,6 +120,10 @@ p {
     transition: all 0.5s ease 1s;
 }
 
+.hero-description strong {
+    color: var(--light-green);
+}
+
 .hero-image {
     display: flex;
     justify-content: center;

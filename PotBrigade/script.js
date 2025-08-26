@@ -160,13 +160,16 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 const brigadeFacts = [
+    "Pot Brigade is the least strict division in The Computer Union, which usually results in laid-back events, but it also means they're the least disciplined.",
+    "The Pot Brigade has made formal alliances with the Ministry of Media and Union’s Airforce.",
+    "Pots were sworn enemies of the former Spedsnaz, though the division is now disbanded.",
+    "Pot's soldiers have a pot on their head, because Olimusy put a pot on a random guard, and through this joke he got the idea to make a division out of it. The Pots are not glued to the player's head. With the recent city update, they can take the Pot off their head and hit enemies with it, resulting in the same effect the Fish has (ragdolling), although unlike the fish, it plays a loud metal 'clank' noise and takes approximately 40% off the enemy's health.", 
+    "The Pot Brigade is the largest division in the entire TCU.",
+    "The Pot Brigade has only had three Heads of Brigades (Trevor, Zeni, and Boufallionatlas).",
+    "The Pot Brigade has been a part of numerous conflicts, including the Pot Brigade and Spedsnaz Conflict and the Pot Brigade Airforce Protests.",
     "Pot Brigade members can target any division except themselves, resulting in accidental RK.",
-    "Pot Brigade is the '𝓯𝓻𝓮𝓪𝓴𝓲𝓮𝓼𝓽' division in The Computer Union (which usually results in being annoying to everyone and extremely immature but also very cool.)",
-    "Pots were supposed to be enemies of the former Spetsnaz, but since they were disbanded, everyone has been left with a gap that's been trying to be filled with the Pot Brigade, although it has many flaws in doing so.",
-    "Probably one of the most controversial divisions due to its big history (not now, but if you gather up all the things that happened, it's quite a big pile). They're okay now.)", 
-    "Unknown why they have pots on their heads! Although they're not glued. With the recent city update, they can take the pot off their head and hit you with it, resulting in the same effect the fish has, although playing a loud metal-clank noise and taking 40% (approximate) of the player's health.",
-    "The second biggest division, the first one being TGRA.",
-    "The second Biggest rkilling division, the first one being TGRA."
+    "The Pot Brigade is probably one of the most controversial divisions due to its big history.",
+    "After Spedsnaz got disbanded, the Pot Brigade Spawn was made into a Cube, and on it's Left-hand side, there is a grave for Spedsnaz with a shower pouring water on it, and a note attached to it saying: 'Here is your deserved shower, Spedsnaz'."
 ];
 
 function showBrigadeFact() {
