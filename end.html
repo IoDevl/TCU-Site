@@ -64,12 +64,44 @@
             font-weight: 600;
         }
 
+        .begin-overlay {
+            position: fixed;
+            inset: 0;
+            background: #000;
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: opacity 1s ease;
+        }
+        .begin-overlay.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .begin-text {
+            color: #444;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            animation: blink 2s ease-in-out infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 0.4; }
+            50%       { opacity: 1; }
+        }
+
         .credit-line.highlight {
             color: #ddd;
         }
     </style>
 </head>
 <body>
+    <div class="begin-overlay" id="beginOverlay">
+        <span class="begin-text">Click anywhere to begin</span>
+    </div>
+
     <div class="credits-wrapper">
         <div class="credits-container">
 
@@ -120,15 +152,15 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             const audio = document.getElementById('bgMusic');
+            const overlay = document.getElementById('beginOverlay');
 
             audio.addEventListener('playing', startSequence, { once: true });
 
-            audio.play().catch(() => {
-                document.addEventListener('click', function onFirstClick() {
-                    audio.play();
-                    document.removeEventListener('click', onFirstClick);
-                }, { once: true });
-            });
+            overlay.addEventListener('click', function () {
+                overlay.classList.add('fade-out');
+                setTimeout(() => overlay.remove(), 1000);
+                audio.play();
+            }, { once: true });
         });
     </script>
 </body>
