@@ -107,7 +107,11 @@
             { id: 'line4', delay: 16000 }
         ];
 
+        let sequenceStarted = false;
+
         function startSequence() {
+            if (sequenceStarted) return;
+            sequenceStarted = true;
             lines.forEach(({ id, delay }) => {
                 setTimeout(() => {
                     document.getElementById(id).classList.add('visible');
@@ -118,15 +122,13 @@
         document.addEventListener('DOMContentLoaded', function () {
             const audio = document.getElementById('bgMusic');
 
-            audio.play().then(() => {
-                startSequence();
-            }).catch(() => {
+            audio.addEventListener('playing', startSequence, { once: true });
+
+            audio.play().catch(() => {
                 document.addEventListener('click', function onFirstClick() {
                     audio.play();
-                    startSequence();
                     document.removeEventListener('click', onFirstClick);
-                });
-                startSequence();
+                }, { once: true });
             });
         });
     </script>
