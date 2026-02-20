@@ -10,158 +10,56 @@
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Roboto+Condensed:wght@300;400;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Temporary Notification */
-        .top-notification {
+        .end-notification {
             position: fixed;
             top: 0;
             left: 50%;
             transform: translateX(-50%) translateY(-100%);
-            background: linear-gradient(135deg, #8b0000 0%, #660000 100%);
-            border: 2px solid #aa0000;
+            background: #000;
+            border: 1px solid #333;
             border-top: none;
-            border-radius: 0 0 12px 12px;
-            box-shadow: 0 4px 20px rgba(139, 0, 0, 0.3);
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.7);
             z-index: 10000;
-            min-width: 300px;
-            max-width: 500px;
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            min-width: 280px;
+            animation: endSlideDown 0.8s ease-out 0.8s forwards;
             cursor: pointer;
-            animation: slideDown 0.8s ease-out 0.5s forwards;
-        }
-
-        .top-notification:hover {
-            transform: translateX(-50%) translateY(2px);
-            box-shadow: 0 6px 25px rgba(139, 0, 0, 0.4);
-        }
-
-        @keyframes slideDown {
-            from {
-                transform: translateX(-50%) translateY(-100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(-50%) translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .notification-content {
-            padding: 15px 20px;
-            color: #fff;
-        }
-
-        .notification-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .notification-title {
-            font-family: 'Russo One', sans-serif;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #fff;
-        }
-
-        .notification-close {
-            background: none;
-            border: none;
-            color: #fff;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0;
-            width: 25px;
-            height: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-
-        .notification-close:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: scale(1.1);
-        }
-
-        .notification-expanded {
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid rgba(255, 255, 255, 0.3);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .notification-expanded .discord-link {
-            color: #ddaa77;
             text-decoration: none;
-            font-weight: 600;
-            border-bottom: 1px solid #ddaa77;
-            transition: all 0.3s ease;
+            display: block;
+            transition: border-color 0.3s ease;
         }
-
-        .notification-expanded .discord-link:hover {
-            color: #eee;
-            border-bottom-color: #eee;
-            text-shadow: 0 0 5px rgba(238, 238, 238, 0.4);
+        .end-notification:hover {
+            border-color: #666;
         }
-
-        .notification-expanded p {
-            margin: 0;
+        @keyframes endSlideDown {
+            from { transform: translateX(-50%) translateY(-100%); opacity: 0; }
+            to   { transform: translateX(-50%) translateY(0);    opacity: 1; }
         }
-
-        .top-notification.hidden {
-            pointer-events: none;
-            animation: slideUp 0.5s ease-in forwards !important;
+        .end-notification-content {
+            padding: 14px 30px;
+            color: #fff;
+            text-align: center;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 0.95rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
         }
-
-        @keyframes slideUp {
-            from {
-                transform: translateX(-50%) translateY(0);
-                opacity: 1;
-            }
-            to {
-                transform: translateX(-50%) translateY(-100%);
-                opacity: 0;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .top-notification {
-                min-width: 280px;
-                max-width: 90vw;
-            }
-            
-            .notification-content {
-                padding: 12px 15px;
-            }
-            
-            .notification-title {
-                font-size: 1rem;
-            }
+        .end-notification-content span {
+            color: #666;
+            font-size: 0.75rem;
+            display: block;
+            margin-top: 3px;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
-    <!-- Temporary Notification -->
-    <div id="topNotification" class="top-notification">
-        <div class="notification-content">
-            <div class="notification-header">
-                <span class="notification-title">Please read</span>
-                <button class="notification-close">&times;</button>
-            </div>
-            <div class="notification-expanded" id="expandedContent" style="display: none;">
-                <p>Hello, I'm in need of artists for division propaganda. If you have some or know someone who does, please contact me at <a href="https://discord.com/users/686613311886065668" target="_blank" class="discord-link">@io.dev</a>. For more information about the art, check any <a href="all" class="discord-link">page</a>. 
-                    <br> Of course you will be credited for your work, like every other artist in <a href="credits" class="discord-link">credits</a>. 
-                    <br> _______________________________________________________
-                    <br> Also, all information is taken from the official wiki. The information MAY be <strong style="color: #000000;">minimal and incomplete </strong>. 
-                    <br> If you're part of any division, I'd love for you to share more informations about it. <strong style="color: #000000;">DO NOT LEAK</strong>, only public<a style="font-size: 0.7rem; color: #ffffffc4;">-ish</a> information.
-                    <br> You will be credited for that too. <a style="font-size: 0.7rem;">(Remaining anonymous is also possible if requested.)</a>
-                    <br> Thanks for reading.</p>
-            </div>
+    <!-- The End Notification -->
+    <a href="end" class="end-notification">
+        <div class="end-notification-content">
+            THE END
         </div>
-    </div>
+    </a>
 
     <!-- Hero Section -->
     <section class="hero-proclamation">
@@ -170,22 +68,22 @@
                 <img src="logo.png" alt="The Computer Union Logo" class="union-logo">
                 <h2 class="proclamation-title">THE COMPUTER UNION</h2>
                 <p style="color: orange; margin: 5px 0; font-size: 1.3rem; margin-bottom: 5px;">W.I.P. - Work In Progress</p>
-                <p style="color: rgb(238, 120, 73); margin: 5px 0; font-size: 1.3rem; margin-bottom: 5px;">Currently on hold</p>
+                <p style="color: rgb(238, 120, 73); margin: 5px 0; font-size: 1.3rem; margin-bottom: 5px;">Cancelled</p>
                 <p style="color: red; margin: 5px 0; font-size: 1.5rem; margin-bottom: 20px;">Unofficial Wiki - Fan Project</p>
                 <p class="proclamation-desc">
                     <em>The Computer Union (officially the Revolutionary Computer Union) is a large-scale northern communist republic. Established in 1945, it has been ruled by the <strong>PC Communist Party</strong> since its founding by Nooblordjjj, its first dictator. It is the main setting of Papers Pls.</em>
                 </p>
                 <div class="stats-grid">
                     <div class="stat-item">
-                        <span class="stat-number">56k+</span>
+                        <span class="stat-number">???</span>
                         <span class="stat-label">DISCORD MEMBERS</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">590k+</span>
+                        <span class="stat-number">???</span>
                         <span class="stat-label">ROBLOX MEMBERS</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">2.1M+</span>
+                        <span class="stat-number">???</span>
                         <span class="stat-label">VISITS (papers, pls)</span>
                     </div>
                 </div>
@@ -200,8 +98,8 @@
             <div class="leadership-grid">
                 <div class="leader-card dictator">
                     <div class="leader-rank">DICTATOR</div>
-                    <h3 class="leader-name">SEVHS1</h3>
-                    <p class="leader-desc">Current dictator and a former director of the CGB.</p>
+                    <h3 class="leader-name">???</h3>
+                    <p class="leader-desc">No information yet.</p>
                 </div>
                 <div class="leader-card chairman">
                     <div class="leader-rank">CHAIRMAN</div>
@@ -210,8 +108,8 @@
                 </div>
                 <div class="leader-card field-marshal">
                     <div class="leader-rank">FIELD MARSHAL</div>
-                    <h3 class="leader-name">MATROM</h3>
-                    <p class="leader-desc">Current Field Marshal of the Glorious Robot Army.</p>
+                    <h3 class="leader-name">???</h3>
+                    <p class="leader-desc">No information yet.</p>
                 </div>
             </div>
         </div>
@@ -250,8 +148,12 @@
                             <p>After Look_r1se's death, the Era of Newblord began. A relative of the first dictator, he assumed power without controversy.</p>
                         </div>
                         <div class="dictator-era">
-                            <h4>SEVHS1 ERA (Present)</h4>
+                            <h4>SEVHS1 ERA</h4>
                             <p>After Newblord exploding on stage during his speech, sevhs1 took over TCU.</p>
+                        </div>
+                        <div class="dictator-era" style="border-left: 4px solid #cc0000; padding: 20px 20px 20px 20px; background: rgba(204,0,0,0.08); border-radius: 6px; margin-top: 10px;">
+                            <h4 style="color: #ff2222; font-size: 1.1em; letter-spacing: 2px;">⚑ THE END OF THE COMPUTER UNION</h4>
+                            <p>Shortly after TCU was sold to <strong>xCrypticPsychp</strong> by Sevsh1 for 35k USD and 3 Million Robux, the TCU main Discord had been nuked along with the Union Guard's group. Interestingly enough, the Union Guards group stayed up after the initial nuke, implying that it has been disbanded or manually removed by the new owner. Most ministries and divisions as of currently appear to not be operating under TCU rule, as suggested by still being owned by the ComputerMotherland account and not the psycho, as well as the corporate member not being in those servers. The state of some divisions and ministries is currently completely unknown. The Glorious Robot Army also will be transferred over with a new look.</p>
                         </div>
                     </div>
                 </div>
@@ -416,41 +318,5 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        // Temporary Notification
-        function closeNotification() {
-            const notification = document.getElementById('topNotification');
-            notification.classList.add('hidden');
-        }
-
-        function toggleNotification() {
-            const expandedContent = document.getElementById('expandedContent');
-            const notification = document.getElementById('topNotification');
-            
-            if (expandedContent.style.display === 'none') {
-                expandedContent.style.display = 'block';
-                notification.style.cursor = 'default';
-            } else {
-                expandedContent.style.display = 'none';
-                notification.style.cursor = 'pointer';
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const notification = document.getElementById('topNotification');
-            const closeBtn = notification.querySelector('.notification-close');
-            
-            notification.addEventListener('click', function(e) {
-                if (e.target !== closeBtn && !closeBtn.contains(e.target)) {
-                    toggleNotification();
-                }
-            });
-            
-            closeBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                closeNotification();
-            });
-        });
-    </script>
 </body>
 </html>

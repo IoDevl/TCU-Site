@@ -181,9 +181,14 @@
                 grid-template-columns: 1fr;
             }
         }
+        .outdated-overlay { display: none; }
+        section { position: relative; }
+        section::before { content: 'OUTDATED'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-30deg); border: 16px solid rgba(160, 0, 0, 0.7); padding: 20px 50px; border-radius: 8px; color: rgba(160, 0, 0, 0.7); font-family: 'Courier New', Courier, monospace; font-size: 7rem; font-weight: 900; letter-spacing: 10px; text-transform: uppercase; white-space: nowrap; pointer-events: none; z-index: 9999; }
+        body { filter: saturate(0.65) brightness(0.88) !important; }
     </style>
 </head>
 <body>
+    <div class="outdated-overlay"><div class="outdated-stamp">OUTDATED</div><div class="outdated-stamp">OUTDATED</div><div class="outdated-stamp">OUTDATED</div></div>
     <!-- Main Content -->
     <main class="main-content">
         <div class="container">

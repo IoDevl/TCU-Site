@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The End</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            background: #000;
+            color: #fff;
+            min-height: 100vh;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        .credits-wrapper {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 30px;
+        }
+
+        .credits-container {
+            max-width: 680px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .credit-line {
+            opacity: 0;
+            transform: translateY(12px);
+            font-size: 1.25rem;
+            line-height: 1.9;
+            margin-bottom: 50px;
+            color: #bbb;
+            transition: opacity 2s ease, transform 2s ease;
+        }
+
+        .credit-line.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .credit-line em {
+            color: #888;
+            font-size: 1rem;
+        }
+
+        .credit-line.signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.2rem;
+            color: #fff;
+            margin-bottom: 0;
+            font-weight: 600;
+        }
+
+        .credit-line.highlight {
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="credits-wrapper">
+        <div class="credits-container">
+
+            <p class="credit-line" id="line1">
+                After sevs sold the game, the TCU officially split in 2.<br>
+                One being <strong>TCU</strong> with Cryptic,<br>
+                and the other being <strong>TRCU</strong> with Voidz.
+            </p>
+
+            <p class="credit-line" id="line2">
+                Because of all the chaos and changes,<br>
+                I do not feel comfortable continuing the TCU Wiki Project.<br>
+                <em>(The official wiki also sided with TRCU.)</em>
+            </p>
+
+            <p class="credit-line highlight" id="line3">
+                Thanks again to all who contributed to this project &lt;3
+            </p>
+
+            <p class="credit-line signature" id="line4">
+                ~ Io
+                <br><span style="font-family: 'Roboto Condensed', sans-serif; font-size: 0.9rem; color: #555; letter-spacing: 2px; font-weight: 300;">Now listen to peak</span>
+            </p>
+
+        </div>
+    </div>
+
+    <audio id="bgMusic" src="credits.mp3"></audio>
+
+    <script>
+        const lines = [
+            { id: 'line1', delay: 1800 },
+            { id: 'line2', delay: 6500 },
+            { id: 'line3', delay: 12000 },
+            { id: 'line4', delay: 16000 }
+        ];
+
+        function startSequence() {
+            lines.forEach(({ id, delay }) => {
+                setTimeout(() => {
+                    document.getElementById(id).classList.add('visible');
+                }, delay);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const audio = document.getElementById('bgMusic');
+
+            audio.play().then(() => {
+                startSequence();
+            }).catch(() => {
+                document.addEventListener('click', function onFirstClick() {
+                    audio.play();
+                    startSequence();
+                    document.removeEventListener('click', onFirstClick);
+                });
+                startSequence();
+            });
+        });
+    </script>
+</body>
+</html>

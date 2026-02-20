@@ -264,8 +264,6 @@ function animateMemberCard(card) {
 }
 
 function showPatriotism() {
-    window.open('https://discord.gg/computerunion', '_blank');
-    
     const messages = [
         "GLORY TO THE COMPUTER UNION!",
         "FOR THE MOTHERLAND!",
